@@ -7,16 +7,23 @@ import ClickSpark from '@/components/Effets/ClickSpark';
 function Services() {
   return (
     <ClickSpark>
+      
       <div style={{ 
-        minHeight: '150vh',
+        minHeight: '90vh',
         width: '100%',
         padding: '20px',
         boxSizing: 'border-box',
       }}>
+        <div className="inline-flex items-center gap-3 justify-center w-full">
+          <div className="w-12 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+          <span className="text-cyan-400 font-semibold tracking-wider">SERVICES</span>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+        </div>
+
         <h1 style={{ 
           textAlign: 'center', 
           color: 'white', 
-          margin: '40px 0 30px',
+          margin: '30px 0 40px',
           fontSize: '2.5rem',
           fontWeight: '800',
           letterSpacing: '-0.5px'
@@ -26,8 +33,9 @@ function Services() {
         <div style={{ 
           width: '100%',
           maxWidth: '900px',
-          margin: '0 auto 50px',
-          position: 'relative'
+          margin: '0 auto',
+          position: 'relative',
+          minHeight: '500px', // Hauteur réduite
         }}>
           <ScrollStack
             itemDistance={120}
@@ -236,6 +244,7 @@ function Services() {
                 </p>
               </div>
             </ScrollStackItem>
+            
           </ScrollStack>
         </div>
       </div>

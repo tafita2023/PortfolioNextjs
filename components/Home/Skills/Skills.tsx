@@ -19,6 +19,7 @@ import {
   SiVercel,
   SiFirebase
 } from 'react-icons/si';
+import ClickSpark from '@/components/Effets/ClickSpark';
 
 const Skills = () => {
   // Préparer les logos pour LogoLoop - format attendu par votre LogoLoop
@@ -120,9 +121,26 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4" id="skills">
+    <div className="min-h-screen py-6 px-2" id="skills">
+          {/* ClickSpark par-dessus */}
+    <ClickSpark
+        sparkColor="#00FFFF"
+        sparkSize={10}
+        sparkRadius={25}
+        sparkCount={10}
+        duration={500}
+        easing="ease-out"
+        extraScale={1.0}
+        className="relative z-10 w-full h-full"
+      >
+
       {/* Section Titre */}
       <div className="text-center mb-16">
+        <div className="inline-flex items-center gap-3 mb-4">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+            <span className="text-cyan-400 font-semibold tracking-wider">SKILLS</span>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+          </div>
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Mes <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Compétences</span>
         </h2>
@@ -154,6 +172,7 @@ const Skills = () => {
           />
         </div>
       </div>
+      </ClickSpark>
     </div>
   );
 };

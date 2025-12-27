@@ -5,11 +5,10 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { id: 1, label: "Home", url: "/", sectionId: "home" },
-  { id: 2, label: "About", url: "/#about", sectionId: "about" },
+  { id: 2, label: "About me", url: "/#about", sectionId: "about" },
   { id: 3, label: "Services", url: "/#services", sectionId: "services" },
   { id: 4, label: "Skills", url: "/#skills", sectionId: "skills" },
-  { id: 5, label: "Projects", url: "/#projects", sectionId: "projects" },
-  { id: 6, label: "Contact", url: "/#contact", sectionId: "contact" },
+  { id: 5, label: "Contact", url: "/#contact", sectionId: "contact" },
 ];
 
 export default function Navbar() {
