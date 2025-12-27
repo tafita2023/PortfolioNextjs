@@ -80,7 +80,7 @@ function Contact() {
               <div className="space-y-4">
                 {/* Téléphone */}
                 <a
-                  href="tel:+261341234567"
+                  href="tel:+261344718839"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
                 >
                   <div className="p-2 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg group-hover:scale-105 transition-transform">
@@ -90,7 +90,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm sm:text-base mb-1">Téléphone</h3>
-                    <p className="text-gray-400 text-xs sm:text-sm">+261 34 47 188 39 / +261 32 97 062 66</p>
+                    <p className="text-gray-400 text-xs sm:text-sm">+261 34 47 188 39</p>
                   </div>
                 </a>
 
