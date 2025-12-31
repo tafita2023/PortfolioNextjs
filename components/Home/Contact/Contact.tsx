@@ -1,61 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
-import ClickSpark from '@/components/Effets/ClickSpark';
+import React from 'react';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulation d'envoi
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage('Message envoyé avec succès !');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      setTimeout(() => {
-        setSubmitMessage('');
-      }, 5000);
-    }, 1500);
-  };
-
   return (
-    <div id="contact" className="min-h-screen px-4 text-white py-8">
-      {/* ClickSpark par-dessus */}
-      <ClickSpark
-        sparkColor="#00FFFF"
-        sparkSize={10}
-        sparkRadius={25}
-        sparkCount={10}
-        duration={500}
-        easing="ease-out"
-        extraScale={1.0}
-        className="relative z-10 w-full h-full"
-      >
-
+    <div id="contact" className="min-h-screen px-4 mb-4 text-white">
       <div className="max-w-5xl mx-auto">
-        {/* Section Titre - Réduite */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-3 mb-5">
+        {/* Section Titre */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-3 mt-2 mb-5">
             <div className="w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
             <span className="text-cyan-400 font-semibold tracking-wider text-sm">CONTACT</span>
             <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
@@ -68,10 +21,11 @@ function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
-          {/* Colonne gauche - Informations - Réduite */}
-          <div className="space-y-6">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 sm:p-6">
+        {/* Contenu sur une seule colonne centrée */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-2xl">
+            {/* Informations de contact */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 sm:p-6 mb-6">
               <h2 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
                 <div className="w-6 h-0.5 bg-cyan-500"></div>
                 Informations de contact
@@ -96,7 +50,7 @@ function Contact() {
 
                 {/* Email */}
                 <a
-                  href="mailto:contact@tafita.dev"
+                  href="mailto:ravelonarivotafitasoa@gmail.com"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
                 >
                   <div className="p-2 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg group-hover:scale-105 transition-transform">
@@ -126,7 +80,7 @@ function Contact() {
               </div>
             </div>
 
-            {/* Disponibilité - Réduite */}
+            {/* Disponibilité */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 sm:p-6">
               <h3 className="text-base sm:text-lg font-bold mb-3">Disponibilité</h3>
               <div className="space-y-2">
@@ -144,115 +98,8 @@ function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Colonne droite - Formulaire - Réduit */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 sm:p-6">
-            <h2 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
-              <div className="w-6 h-0.5 bg-blue-500"></div>
-              Envoyez-moi un message
-            </h2>
-            
-            <p className="text-gray-400 text-sm mb-6">
-              Remplissez le formulaire ci-dessous
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-1">
-                  <label htmlFor="name" className="text-xs sm:text-sm font-medium text-gray-300">
-                    Nom complet *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-                    placeholder="Votre nom"
-                  />
-                </div>
-
-                <div className="space-y-1">
-                  <label htmlFor="email" className="text-xs sm:text-sm font-medium text-gray-300">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <label htmlFor="subject" className="text-xs sm:text-sm font-medium text-gray-300">
-                  Sujet *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-                  placeholder="Objet de votre message"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label htmlFor="message" className="text-xs sm:text-sm font-medium text-gray-300">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="w-full px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all resize-none"
-                  placeholder="Décrivez votre projet..."
-                />
-              </div>
-
-              {submitMessage && (
-                <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
-                  <p className="text-green-400 text-xs sm:text-sm">✓ {submitMessage}</p>
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3 px-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm sm:text-base"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    Envoi en cours...
-                  </>
-                ) : (
-                  <>
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
-                    </svg>  
-                    Envoyer le message
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
         </div>
       </div>
-      </ClickSpark>
     </div>
   );
 }

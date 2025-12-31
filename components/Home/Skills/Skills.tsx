@@ -19,7 +19,6 @@ import {
   SiVercel,
   SiFirebase
 } from 'react-icons/si';
-import ClickSpark from '@/components/Effets/ClickSpark';
 
 const Skills = () => {
   // Préparer les logos pour LogoLoop - format attendu par votre LogoLoop
@@ -121,19 +120,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen py-6 px-2" id="skills">
-          {/* ClickSpark par-dessus */}
-    <ClickSpark
-        sparkColor="#00FFFF"
-        sparkSize={10}
-        sparkRadius={25}
-        sparkCount={10}
-        duration={500}
-        easing="ease-out"
-        extraScale={1.0}
-        className="relative z-10 w-full h-full"
-      >
-
+    <div className="px-4" id="skills">
       {/* Section Titre */}
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-3 mb-4">
@@ -150,10 +137,10 @@ const Skills = () => {
       </div>
 
       {/* Logo Loop Horizontal */}
-      <div className="mb-20">
+      <div>
         <div className="mb-8 text-center">
           <h3 className="text-2xl font-semibold text-white mb-2">Technologies Principales</h3>
-          <p className="text-gray-400">Défilement infini des technologies que je maîtrise</p>
+          <p className="text-gray-400">Les technologies que je maîtrise</p>
         </div>
         
         <div className="relative h-40 overflow-hidden">
@@ -172,7 +159,6 @@ const Skills = () => {
           />
         </div>
       </div>
-      </ClickSpark>
     </div>
   );
 };

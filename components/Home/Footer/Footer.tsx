@@ -1,25 +1,12 @@
 "use client";
 
 import React from 'react';
-import ClickSpark from '@/components/Effets/ClickSpark';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white border-t border-white/10">
-    {/* ClickSpark par-dessus */}
-    <ClickSpark
-        sparkColor="#00FFFF"
-        sparkSize={10}
-        sparkRadius={25}
-        sparkCount={10}
-        duration={500}
-        easing="ease-out"
-        extraScale={1.0}
-        className="relative z-10 w-full h-full"
-      >
-
+    <footer className="relative text-white border-t border-white/10">
       {/* Effet de fond */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -left-20 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl"></div>
@@ -51,7 +38,6 @@ function Footer() {
         </div>
         
       </div>
-      </ClickSpark>
     </footer>
   );
 }

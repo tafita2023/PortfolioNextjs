@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
-import ClickSpark from '@/components/Effets/ClickSpark';
 import Particles from '@/components/Effets/Particle';
 
 function Hero() {
@@ -15,7 +14,7 @@ function Hero() {
   }, []);
 
   return (
-    <div id='home' className="relative w-full min-h-[100vh] max-h-[120vh] overflow-hidden">
+    <div id='home' className="relative w-full min-h-[80vh] max-h-[120vh] overflow-hidden">
       {/* Particles en arrière-plan - div avec taille fixe */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Particles
@@ -33,18 +32,6 @@ function Hero() {
           className="w-full"
         />
       </div>
-      
-      {/* ClickSpark par-dessus */}
-      <ClickSpark
-        sparkColor="#00FFFF"
-        sparkSize={10}
-        sparkRadius={25}
-        sparkCount={10}
-        duration={500}
-        easing="ease-out"
-        extraScale={1.0}
-        className="relative z-10 w-full h-full"
-      >
         <div className="relative flex flex-col md:flex-row items-center justify-center md:justify-between text-white w-full h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-20 md:pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16">
           
           {/* Conteneur desktop: Texte à gauche (premier sur desktop) */}
@@ -79,9 +66,6 @@ function Hero() {
 
             {/* Boutons d'action */}
             <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-3 mt-3 sm:mt-4 md:mt-5">
-              <button className="px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg hover:from-cyan-700 hover:to-blue-800 transition-all duration-300 shadow hover:shadow-cyan-500/20 text-xs sm:text-sm md:text-base">
-                Voir mes projets
-              </button>
               <button className="px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs sm:text-sm md:text-base cursor-pointer">
                 Télécharger mon CV
               </button>
@@ -191,10 +175,6 @@ function Hero() {
 
             {/* Boutons d'action - version mobile */}
             <div className="flex flex-wrap justify-center gap-4 mt-4">
-              <button className="px-4 sm:px-5 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg hover:from-cyan-700 hover:to-blue-800 transition-all duration-300 shadow hover:shadow-cyan-500/20 text-sm sm:text-base"
-              >
-                Voir mes projets
-              </button>
               <button className="px-4 sm:px-5 py-2.5 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm sm:text-base cursor-pointer">
                 Télécharger mon CV
               </button>
@@ -248,7 +228,6 @@ function Hero() {
           </div>
 
         </div>
-      </ClickSpark>
     </div>
   );
 }
