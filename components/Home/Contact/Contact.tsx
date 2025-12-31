@@ -4,7 +4,7 @@ import React from 'react';
 
 function Contact() {
   return (
-    <div id="contact" className="min-h-screen px-4 mb-4 text-white">
+    <div id="contact" className="min-h-screen px-4 mb-1 text-white">
       <div className="max-w-5xl mx-auto">
         {/* Section Titre */}
         <div className="text-center mb-12">

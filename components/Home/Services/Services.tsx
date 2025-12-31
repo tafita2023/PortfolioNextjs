@@ -7,7 +7,7 @@ function Services() {
   return (      
     <div id="services" style={{ 
       width: '100%',
-      padding: '40px 20px',
+      padding: '20px 20px 30px 20px',
       boxSizing: 'border-box',
     }}>
       <div className="inline-flex items-center gap-3 justify-center w-full">
@@ -19,7 +19,7 @@ function Services() {
       <h1 style={{ 
         textAlign: 'center', 
         color: 'white', 
-        margin: '20px 0 30px',
+        margin: '20px 0 10px',
         fontSize: '2.5rem',
         fontWeight: '800',
         letterSpacing: '-0.5px'
@@ -29,14 +29,14 @@ function Services() {
       
       <div style={{ 
         width: '100%',
-        maxWidth: '900px',
+        maxWidth: '700px',
         margin: '0 auto',
         position: 'relative',
-        minHeight: '400px',
+        minHeight: '90px',
       }}>
         <ScrollStack
-          itemDistance={100}
-          itemStackDistance={20}
+          itemDistance={80}
+          itemStackDistance={15}
           stackPosition="40%"
           baseScale={0.92}
           itemScale={0.04}
@@ -50,7 +50,7 @@ function Services() {
               color: 'white',
               padding: '32px',
               borderRadius: '24px',
-              minHeight: '280px',
+              minHeight: '220px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
