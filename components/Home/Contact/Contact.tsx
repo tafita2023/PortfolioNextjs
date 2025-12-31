@@ -50,7 +50,7 @@ function Contact() {
 
                 {/* Email */}
                 <a
-                  href="mailto:ravelonarivotafitasoa@gmail.com"
+                  href="mailto:tafitasoaravelonarivo@gmail.com"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
                 >
                   <div className="p-2 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg group-hover:scale-105 transition-transform">
@@ -60,7 +60,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm sm:text-base mb-1">Email</h3>
-                    <p className="text-gray-400 text-xs sm:text-sm">ravelonarivotafitasoa@gmail.com</p>
+                    <p className="text-gray-400 text-xs sm:text-sm">tafitasoaravelonarivo@gmail.com</p>
                   </div>
                 </a>
 
