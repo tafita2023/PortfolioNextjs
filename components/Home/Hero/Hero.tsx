@@ -14,7 +14,7 @@ function Hero() {
   }, []);
 
   return (
-    <div id='home' className="relative w-full min-h-[80vh] max-h-[120vh] overflow-hidden">
+    <div id='home' className="relative w-full min-h-[100vh] max-h-[120vh] overflow-hidden">
       {/* Particles en arrière-plan - div avec taille fixe */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Particles
@@ -29,7 +29,7 @@ function Hero() {
           sizeRandomness={1}
           cameraDistance={25}
           disableRotation={false}
-          className="w-full"
+          className="w-full h-full"
         />
       </div>
         <div className="relative flex flex-col md:flex-row items-center justify-center md:justify-between text-white w-full h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-20 md:pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16">

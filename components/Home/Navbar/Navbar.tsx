@@ -23,7 +23,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Gestion du scroll pour l'effet visuel
+      // Gestion du scroll
       if (window.scrollY > 20) {
         setScrolled(true);
       } else {
