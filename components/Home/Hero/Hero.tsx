@@ -14,7 +14,7 @@ function Hero() {
   }, []);
 
   return (
-    <div id='home' className="relative w-full min-h-[100vh] max-h-[120vh] overflow-hidden">
+    <div id='home' className="relative w-full min-h-[100vh] max-h-[120vh] mt-4 overflow-hidden">
       {/* Particles en arrière-plan - div avec taille fixe */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Particles
