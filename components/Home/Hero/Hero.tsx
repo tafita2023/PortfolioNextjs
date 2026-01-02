@@ -17,9 +17,9 @@ function Hero() {
   const handleDownloadCV = () => {
     // Créer un lien temporaire pour le téléchargement
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; // Assurez-vous d'avoir votre fichier CV dans le dossier public
-    link.download = 'CV_RAVELONARIVO_Tafitasoa.pdf'; // Nom du fichier téléchargé
-    link.target = '_blank'; // Ouvrir dans un nouvel onglet pour les fichiers PDF
+    link.href = '/cv/TafitasoaCV.pdf';
+    link.download = 'CV_RAVELONARIVO_Tafitasoa.pdf';
+    link.target = '_blank';
     
     // Ajouter le lien au DOM, cliquer dessus, puis le retirer
     document.body.appendChild(link);
