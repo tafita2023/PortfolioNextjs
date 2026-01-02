@@ -13,8 +13,22 @@ function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Fonction pour télécharger le CV
+  const handleDownloadCV = () => {
+    // Créer un lien temporaire pour le téléchargement
+    const link = document.createElement('a');
+    link.href = '/cv.pdf'; // Assurez-vous d'avoir votre fichier CV dans le dossier public
+    link.download = 'CV_RAVELONARIVO_Tafitasoa.pdf'; // Nom du fichier téléchargé
+    link.target = '_blank'; // Ouvrir dans un nouvel onglet pour les fichiers PDF
+    
+    // Ajouter le lien au DOM, cliquer dessus, puis le retirer
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div id='home' className="relative w-full min-h-[100vh] max-h-[120vh] mt-4 overflow-hidden">
+    <div id='home' className="relative z-10 w-full min-h-[100vh] max-h-[120vh] mt-4 overflow-hidden">
       {/* Particles en arrière-plan - div avec taille fixe */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Particles
@@ -66,7 +80,10 @@ function Hero() {
 
             {/* Boutons d'action */}
             <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-3 mt-3 sm:mt-4 md:mt-5">
-              <button className="px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs sm:text-sm md:text-base cursor-pointer">
+              <button 
+                onClick={handleDownloadCV}
+                className="px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs sm:text-sm md:text-base cursor-pointer"
+              >
                 Télécharger mon CV
               </button>
             </div>
@@ -175,7 +192,10 @@ function Hero() {
 
             {/* Boutons d'action - version mobile */}
             <div className="flex flex-wrap justify-center gap-4 mt-4">
-              <button className="px-4 sm:px-5 py-2.5 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm sm:text-base cursor-pointer">
+              <button 
+                onClick={handleDownloadCV}
+                className="px-4 sm:px-5 py-2.5 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm sm:text-base cursor-pointer"
+              >
                 Télécharger mon CV
               </button>
             </div>
